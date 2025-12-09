@@ -7,6 +7,11 @@ public abstract class Conta implements IConta {
 	protected int agencia;
 	protected int numero;
 	protected double saldo;
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
 	protected Cliente cliente;
 
 	public Conta(Cliente cliente) {
@@ -49,4 +54,5 @@ public abstract class Conta implements IConta {
 		System.out.println(String.format("Numero: %d", this.numero));
 		System.out.println(String.format("Saldo: %.2f", this.saldo));
 	}
+
 }

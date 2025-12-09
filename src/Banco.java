@@ -16,7 +16,8 @@ public class Banco {
 	public List<Conta> getContas() {
 		return contas;
 	}
-
+	//Metodo para ver todos os clientes de um banco
+	public List<Cliente> getCliente(){return  contas.stream().map(Conta::getCliente).toList();}
 	public void setContas(List<Conta> contas) {
 		this.contas = contas;
 	}
